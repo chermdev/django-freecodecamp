@@ -1,12 +1,7 @@
 from django.db import models
-from dataclasses import dataclass
+
 
 # Create your models here.
-
-
-@dataclass
-class Feature:
-    id: int
-    name: str
-    details: str
-    is_true: bool
+class Feature(models.Model):
+    name = models.CharField(max_length=100)
+    details = models.CharField(max_length=500)
